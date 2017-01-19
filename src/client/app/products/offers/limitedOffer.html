@@ -1,0 +1,18 @@
+<div ng-controller="OfferController as vm">
+  <div class="text-left limitedOfferHeading">
+    Tidsbegrænset tilbud, udløber om:
+  </div>
+  <div class="text-left">
+    <label>{{vm.limitedOffer.daysToExpiration}} Dage
+    {{vm.limitedOffer.hoursToExpiration}} Timer
+    {{vm.limitedOffer.minutesToExpiration}} Minutter
+    {{vm.limitedOffer.secondsToExpiration}} Sekunder</label>
+  </div>
+  <div>
+    <div class="dataimage"><img ng-src="images/products/{{vm.limitedOffer.image}}" height="300px;"/></div>
+    <div class="datadescription">{{vm.limitedOffer.description}}</div>
+  </div>
+  <div class="dataprice">
+    <div><span>Kun <br>{{vm.limitedOffer.price}}</span></div>
+  </div>
+</div>

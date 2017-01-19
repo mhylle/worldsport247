@@ -1,0 +1,129 @@
+<div>
+  <div class="text-left">
+    <label>Bruger indstillinger</label>
+  </div>
+  <div class="userdata col-xs-3">
+    <div class="header row">Mine data</div>
+    <div class="div-table" ng-controller="UserController as vm">
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>Brugernavn</label></div>
+        <div class="div-table-col2"><input type="text" ng-model="user.username"/></div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>Password</label></div>
+        <div class="div-table-col2"><input type="password" ng-model="user.password"/></div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>Fornavn</label></div>
+        <div class="div-table-col2"><input type="text" ng-model="user.firstName"/></div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>Efternavn</label></div>
+        <div class="div-table-col2"><input type="text" ng-model="user.lastName"/></div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>Adresse1</label></div>
+        <div class="div-table-col2"><input type="text" ng-model="user.preferences.address.address1"/></div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>Adresse2</label></div>
+        <div class="div-table-col2"><input type="text" ng-model="user.preferences.address.address2"/></div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>Post nr.</label></div>
+        <div class="div-table-col2"><input type="text" ng-model="user.preferences.address.zipcode"/></div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>By</label></div>
+        <div class="div-table-col2"><input type="text" ng-model="user.preferences.address.city"/></div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>Land</label></div>
+        <div class="div-table-col2"><input type="text" ng-model="user.preferences.address.country"/></div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>Størrelse - trøje</label></div>
+        <div class="div-table-col2"><select ng-options="size.size for size in vm.sizes track by size.id"
+                                            ng-model="user.preferences.size.shirt"></select></div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>Størrelse - bukser</label></div>
+        <div class="div-table-col2"><select ng-options="size.size for size in vm.sizes track by size.id"
+                                            ng-model="user.preferences.size.pants"></select></div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>Størrelse - kasket</label></div>
+        <div class="div-table-col2"><select ng-options="size.size for size in vm.sizes track by size.id"
+                                            ng-model="user.preferences.size.cap"></select></div>
+      </div>
+      <div class="div-table-row">
+        <div class="div-table-col1"><label>Størrelse - sko</label></div>
+        <div class="div-table-col2"><select ng-options="size.size for size in vm.sizes track by size.id"
+                                            ng-model="user.preferences.size.shoes"></select></div>
+      </div>
+      <div><input type="button" name="" value="Gem" ng-click="vm.setUserPreferences()"></div>
+    </div>
+  </div>
+
+  <div class="col-xs-9" ng-controller="FavoritesController as vm">
+    <div class="col-xs-12 well">
+      <div class="header row">Mine favoritter</div>
+      <div class="row">
+        <div class="col-xs-2 text-left">
+          <div><label>Sportsgren</label></div>
+          <div><label>Hold</label></div>
+        </div>
+        <div class="col-xs-2 text-right">
+          <div>
+            <select ng-options="sport.name for sport in vm.sports track by sport.id"
+                    ng-model="vm.favorite.sport"></select>
+          </div>
+          <div><select ng-options="team.name for team in vm.teams track by team.id"
+                       ng-model="vm.favorite.team"></select></div>
+          <div>
+            <input type="button" id="Button2" name="" value="Tilføj"
+            ng-click="vm.addFavorite(vm.favorite)" class="btn btn-default">
+            </div>
+        </div>
+        <div class="col-xs-8">
+          <!-- placeholder for spacing purposes -->
+        </div>
+      </div>
+      <div>
+        <table width="100%" border="1">
+          <tr>
+            <th>Sportsgren</th>
+            <th>Hold</th>
+            <th>Fjern</th>
+          </tr>
+          <tr ng-repeat="favorite in vm.favorites track by favorite.id">
+            <td>{{favorite.sport.name}}</td>
+            <td>{{favorite.team.name}}</td>
+            <td><input type="button" class="btn btn-default" ng-click="vm.removeFavorite(favorite)" value="Fjern"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="col-xs-12 well">
+      <div class="header row">Min ønskeliste</div>
+      <div>
+        <table width="100%" border="1">
+          <tr>
+            <th>Emne</th>
+            <th>Størrelse</th>
+            <th>Fjern</th>
+          </tr>
+          <tr ng-repeat="wish in vm.wishes track by wish.id">
+            <td>{{wish.name}}</td>
+            <td>{{wish.size.size}}</td>
+            <td><input type="button" class="btn btn-default" ng-click="vm.removeWish(wish)" value="Fjern"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 text-right"><a href="#" class="btn btn-default ">Send ønskeliste</a></div>
+      </div>
+    </div>
+  </div>
+</div>

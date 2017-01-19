@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="src/client/styles/styles.less"/>
+  <style>
+    /* This helps the ng-show/ng-hide animations start at the right place. */
+    /* Since Angular has this but needs to load, this gives us the class early. */
+
+    .ng-hide {
+      display: none !important;
+    }
+  </style>
+  <title>
+    Worldsport247
+  </title>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <base href="/">
+
+  <!-- build:css styles/lib.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/app.css -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/.tmp/styles.css">
+  <!-- endinject -->
+  <!-- endbuild -->
+</head>
+
+<body>
+<div class="text-center">
+  <div>
+      <div ng-include="'app/layout/header.html'"></div>
+  </div>
+  <div class="subheader row">
+    <div ng-include="'app/layout/subheader.html'"></div>
+  </div>
+  <div class="row mhcontent">
+    <div ui-view></div>
+  </div>
+  <div class="navbar-fixed-bottom footer">
+    <div ng-include="'app/layout/footer.html'"></div>
+  </div>
+</div>
+
+<!-- build:js js/lib.js -->
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/bower_components/extras.angular.plus/ngplus-overlay.js"></script>
+<script src="/bower_components/moment/moment.js"></script>
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="/bower_components/toastr/toastr.js"></script>
+<script src="/bower_components/angular-animate/angular-animate.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js js/app.js -->
+<!-- inject:js -->
+<script src="/src/client/app/app.module.js"></script>
+<script src="/src/client/app/results/results.module.js"></script>
+<script src="/src/client/app/layout/navbar.controller.js"></script>
+<script src="/src/client/app/media/video.controller.js"></script>
+<script src="/src/client/app/news/news.controller.js"></script>
+<script src="/src/client/app/news/news.service.js"></script>
+<script src="/src/client/app/products/bukser/trousers.controller.js"></script>
+<script src="/src/client/app/products/bukser/trousers.service.js"></script>
+<script src="/src/client/app/products/haetter/haette.controller.js"></script>
+<script src="/src/client/app/products/offers/offer.controller.js"></script>
+<script src="/src/client/app/products/offers/offer.service.js"></script>
+<script src="/src/client/app/products/product.filter.js"></script>
+<script src="/src/client/app/products/shop/shop.controller.js"></script>
+<script src="/src/client/app/results/results.controller.js"></script>
+<script src="/src/client/app/results/results.service.js"></script>
+<script src="/src/client/app/statistics/statistics.controller.js"></script>
+<script src="/src/client/app/statistics/statistics.filter.js"></script>
+<script src="/src/client/app/statistics/statistics.service.js"></script>
+<script src="/src/client/app/users/favorites.controller.js"></script>
+<script src="/src/client/app/users/user.controller.js"></script>
+<script src="/src/client/app/users/user.service.js"></script>
+<!-- endinject -->
+
+<!-- inject:templates:js -->
+<!-- endinject -->
+<!-- endbuild -->
+</body>
+
+</html>

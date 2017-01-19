@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-3" ng-controller="VideoController as vm">
+    <div>
+      <div>Seneste video</div>
+      <div><img ng-src="images/handball2.gif"/></div>
+      <div class="text-left video-caption">Dagens kamp stod på et fantastisk mål af målmand Kurt Jensen (iført <a
+        ui-sref="bukser">Adidas bukser</a>) som vi nok ikke kommer til at se foreløbigt igen.
+      </div>
+    </div>
+    <div>
+      <div ng-include="'/app/products/offers/limitedOffer.html'"></div>
+    </div>
+  </div>
+  <div class="col-md-7">
+    <div ng-include="'/app/products/offers/offers.html'"></div>
+  </div>
+  <div class="col-md-2">
+    <div ng-include="'/app/news/news.html'"></div>
+    <div ng-include="'/app/statistics/statistics.html'"></div>
+  </div>
+</div>

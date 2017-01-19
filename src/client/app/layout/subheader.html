@@ -1,0 +1,69 @@
+<div class="header mhnavbar" ng-controller="NavbarController as vm">
+  <div class="dropdown-container">
+    <div class="dropdown">
+      <button class="dropdownButton">Butik</button>
+      <div class="dropdown-content">
+        <div class="mhrow dropdown-item"><a ui-sref="brand" title="Nike">
+          <div class="dropdown-icon "><img ng-src="images/icons/nike.png" width="24"/></div>
+          <span>Nike</span></a></div>
+        <div class="mhrow dropdown-item"><a ui-sref="brand" title="Adidas">
+          <div class="dropdown-icon"><img ng-src="images/icons/adidas.png" width="24"/></div>
+          <span>Adidas</span></a></div>
+        <div class="mhrow dropdown-item"><a ui-sref="brand" title="Diadora">
+          <div class="dropdown-icon"><img ng-src="images/icons/diadora.png" width="24"/></div>
+          <span>Diadora</span></a></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropdownButton">Varer</button>
+      <div class="dropdown-content">
+        <div class="mhrow"><a ui-sref="bukser" title="Bukser">
+          <div class="dropdown-icon "><img ng-src="images/icons/pants.png" width="24"/></div>
+          <span>Bukser</span></a></div>
+        <div class="mhrow"><a title="Sko">
+          <div class="dropdown-icon"><img ng-src="images/icons/shoes.png" width="24"/></div>
+          <span>Sko</span></a></div>
+        <div class="mhrow"><a title="Trøjer">
+          <div class="dropdown-icon"><img ng-src="images/icons/shirts.png" width="24"/></div>
+          <span>Trøjer</span></a></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropdownButton">Sportsgren</button>
+      <div class="dropdown-content">
+        <div class="mhrow dropdown-item"><a ui-sref="brand" title="Fodbold">
+          <div class="dropdown-icon "><img ng-src="images/icons/football.png" width="24"/></div>
+          <span>Fodbold</span></a></div>
+        <div class="mhrow dropdown-item"><a ui-sref="brand" title="Håndbold">
+          <div class="dropdown-icon"><img ng-src="images/icons/handball.png" width="24"/></div>
+          <span>Håndbold</span></a></div>
+        <div class="mhrow dropdown-item"><a ui-sref="brand" title="Tennis">
+          <div class="dropdown-icon"><img ng-src="images/icons/tennis.png" width="24"/></div>
+          <span>Tennis</span></a></div>
+        <div class="mhrow dropdown-item"><a ui-sref="brand" title="Basketbold">
+          <div class="dropdown-icon"><img ng-src="images/icons/basketball.png" width="24"/></div>
+          <span>Basketbold</span></a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="user-information" ng-controller="UserController as vm">
+    <div ng-show="!vm.loggedIn" class="inline">
+      <label>Brugernavn</label><input type="text" ng-model="vm.username" class="inputfield">
+      <label>Password</label><input type="password" ng-model="vm.password" class="inputfield">
+      <input type="button" ng-click="vm.login()" value="Login">
+    </div>
+    <div ng-show="vm.loggedIn" class="inline">
+      Velkommen
+      {{user.firstName}}
+      {{user.lastName}}
+      <input type="button" ng-click="vm.logout()" value="Log ud">
+    </div>
+    <div class="inline" ng-show="user">
+      <span><a ui-sref="usersettings"><img ng-src="images/icons/settings-icon-16.png" height="32px"/></a></span>
+    </div>
+    <div class="inline">
+      <span><img ng-src="images/icons/shopping_cart.png" height="32px"/></span>
+    </div>
+  </div>
+</div>
