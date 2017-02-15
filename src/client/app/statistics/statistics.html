@@ -1,8 +1,8 @@
-<div ng-controller="StatisticsController as vm" style="width: 350px;float: right;padding: 20px;">
+<div ng-controller="StatisticsController as vm" style="width: 350px;float: right;padding-left: 20px;">
   <div ng-show="vm.showSoccer">
-    <div><h3><img ng-src="images/icons/football.png" width="20"/> Fodbold</h3></div>
+    <div class="header"><img ng-src="images/icons/football.png" width="20"/> Fodbold</div>
     <div ng-repeat="match in vm.footBallMatches track by match.id">
-      <div class="row text-left matchLocation">{{match.arena}} in {{match.league}}</div>
+      <!--<div class="row text-left matchLocation">{{match.arena}} in {{match.league}}</div>-->
       <div class="row text-left">
         <div class="col-md-4">{{match.home}}</div>
         <div class="col-md-5">{{match.away}}</div>
@@ -11,9 +11,9 @@
     </div>
   </div>
   <div ng-show="vm.showHandball">
-    <div><h3><img ng-src="images/icons/handball.png" width="20"/>Håndbold</h3></div>
+    <div class="header"><img ng-src="images/icons/handball.png" width="20"/>Håndbold</div>
     <div ng-repeat="match in vm.handBallMatches track by match.id">
-      <div class="row text-left matchLocation">{{match.arena}} in {{match.league}}</div>
+      <!--<div class="row text-left matchLocation">{{match.arena}} in {{match.league}}</div>-->
       <div class="row text-left">
         <div class="col-md-4">{{match.home}}</div>
         <div class="col-md-5">{{match.away}}</div>
@@ -22,9 +22,9 @@
     </div>
   </div>
   <div ng-show="vm.showTennis">
-    <div><h3><img ng-src="images/icons/tennis.png" width="20"/>Tennis</h3></div>
+    <div class="header"><img ng-src="images/icons/tennis.png" width="20"/>Tennis</div>
     <div ng-repeat="match in vm.tennisMatches track by match.id">
-      <div class="row text-left matchLocation">{{match.arena}} in {{match.league}}</div>
+      <!--<div class="row text-left matchLocation">{{match.arena}} in {{match.league}}</div>-->
       <div class="row text-left">
         <div class="col-md-4">{{match.home}}</div>
         <div class="col-md-5">{{match.away}}</div>

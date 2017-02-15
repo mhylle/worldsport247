@@ -1,5 +1,5 @@
-<div ng-controller="NewsController as vm" style="width: 400px; float: right;padding: 20px;">
-  <div><h3>Nyheder</h3></div>
+<div ng-controller="NewsController as vm" style="width: 400px; float: right;padding-left: 20px;">
+  <div><h4>Nyheder</h4></div>
   <ul ng-repeat="news in vm.news track by news.id">
     <li class="text-left" ng-class="news.type" title="{{news.description}}"><a ui-sref="#"> <img
       ng-src="images/icons/{{news.type}}.png" width="20"/> {{news.name}}</a></li>
