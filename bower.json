@@ -29,7 +29,7 @@
     "angular-animate": "^1.6.1",
     "angular-bootstrap": "^1.2.5",
     "typeplate-starter-kit": "^3.0.1",
-    "gsap": "^1.19.0"
+    "gsap": "^1.19.1"
   },
   "resolutions": {
     "angular": "1.6.1"
