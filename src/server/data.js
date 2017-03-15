@@ -61,8 +61,7 @@ function getTrousers() {
       price: 249.00,
       type: 'pants',
       gender: 'Herre',
-      img: ['jesper/nk_trouser07.jpg'],
-      onsale: 'true'
+      img: ['jesper/nk_trouser07.jpg']
     },
     {
       id: 7,

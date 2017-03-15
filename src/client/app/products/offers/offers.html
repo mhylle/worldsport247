@@ -1,22 +1,24 @@
-<div ng-controller="OfferController as vm" class="panel">
-  <div class="panel-heading text-left">
-    <h2>Nu på tilbud</h2>
-    <span ng-show="!user" title="Dette er ikke implementeret.">Opret en konto eller login for at få tilbud der passer lige til dig.</span>
-  </div>
-  <div ng-repeat="product in vm.products track by product.id" class="content slide slide-animation"
-       ng-hide="!vm.isCurrentSlideIndex($index)">
+<div ng-controller="OfferController as vm" >
+    <div class="text-left">
+        <h4>Nu på tilbud</h4>
+        <span ng-show="!user" title="Dette er ikke implementeret.">Opret en konto eller login for at få tilbud der passer lige til dig.</span>
+    </div>
+    <div class="text-left">
+        <div ng-repeat="product in vm.products track by product.id" class="content slide slide-animation"
+             ng-hide="!vm.isCurrentSlideIndex($index)">
 
-    <div class="dataname row">{{product.name}}</div>
-    <div class="dataprice">
-      <div><span>Kun <br>{{product.price}}</span></div>
+            <div class="dataname row">{{product.name}}</div>
+            <div class="dataprice">
+                <div><span>Kun <br>{{product.price}}</span></div>
+            </div>
+            <div class="dataimage"><img ng-src="images/products/{{product.img[0]}}" height="200px;"/></div>
+            <div class="datadescription">{{product.description}}</div>
+            <div class="productKeywords">
+                <ul>
+                    <li ng-repeat="keyword in product.keywords track by keyword.name">* {{keyword.name}}</li>
+                </ul>
+            </div>
+            <div class=""><input type="button" value="Læg i kurv"/></div>
+        </div>
     </div>
-    <div class="dataimage"><img ng-src="images/products/{{product.img[0]}}" height="300px;"/></div>
-    <div class="datadescription">{{product.description}}</div>
-    <div class="productKeywords">
-      <ul>
-        <li ng-repeat="keyword in product.keywords track by keyword.name">* {{keyword.name}}</li>
-      </ul>
-    </div>
-    <div class=""><input type="button" value="Læg i kurv"/> </div>
-  </div>
 </div>

@@ -101,6 +101,7 @@
     function getLimitedOffer() {
       return OfferService.getLimitedOffer().then(function (response) {
         vm.limitedOffer = response;
+        vm.limitedOffer.description =vm.limitedOffer.description.substring(0, 140);
         var expires = vm.limitedOffer.expires;
 
         vm.limitedOffer.daysToExpiration = expires;

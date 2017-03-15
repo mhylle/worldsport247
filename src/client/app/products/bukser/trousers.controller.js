@@ -18,7 +18,7 @@
 
     vm.selectedDetailImage = 0;
     vm.page = 1;
-    vm.itemsOnPage = 8;
+    vm.itemsOnPage = 4;
     vm.numberOfPages = 0;
     vm.getTrousers = getTrousers;
     vm.nextPage = nextPage;
