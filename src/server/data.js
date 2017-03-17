@@ -125,7 +125,7 @@ function getTrousers() {
     {
       id: 12,
       brand: 'Nike',
-      name: 'Tesla Men\'s Cool Dry Compression Baselayer Pants Legging Shorts Tights',
+      name: 'Tesla Men\'s Cool Dry Compression Baselayer Pants',
       description: 'Coolgear shirts & pants are designed for all seasons (not for Warmth).' +
       'Find your size on the chart below. ' +
       'We recommend selecting one size up. Flat-lock Seams Provides excellent comfort and protection. ' +
